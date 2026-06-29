@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Outlet, Navigate, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/features/auth/AuthContext';
 
@@ -17,15 +17,14 @@ const DashboardLayout = () => {
                 <div className="flex h-16 items-center px-6 border-b border-gray-200">
                     <h1 className="text-xl font-bold text-gray-900">TaskFlow</h1>
                 </div>
-                
+
                 <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
                     <Link
                         to="/dashboard"
-                        className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                            location.pathname === '/dashboard'
+                        className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname === '/dashboard'
                                 ? 'bg-gray-100 text-gray-900'
                                 : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                        }`}
+                            }`}
                     >
                         <svg className="mr-3 h-5 w-5 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
